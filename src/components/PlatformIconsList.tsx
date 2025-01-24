@@ -37,7 +37,7 @@ const PlatformIconsList = ({ platforms }: Props) => {
           as="button"
           key={platform.slug}
           padding={1}
-          borderRadius="lg"
+          borderRadius="md"
           _hover={{
             bg: "gray.200",
             color: "blue.500",
@@ -45,7 +45,7 @@ const PlatformIconsList = ({ platforms }: Props) => {
           }}
           transition="all 0.2s ease-in-out"
         >
-          <Icon as={iconMap[platform.slug]} color="orange.300" w={4} h={4} />
+          <Icon as={iconMap[platform.slug]} color="orange.300" w={3} h={3} />
         </Box>
       ))}
     </HStack>
