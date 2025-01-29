@@ -6,7 +6,7 @@ import { useState } from "react";
 import { Genre } from "./hooks/useGenre";
 
 function App() {
- const [selectedGenre , setSelectedGenre] = useState<Genre | null>(null)
+  const [selectedGenre, setSelectedGenre] = useState<Genre | null>(null);
 
   return (
     <Grid
@@ -24,11 +24,14 @@ function App() {
       </GridItem>
       <Show above="lg">
         <GridItem area="aside" paddingX={5}>
-          <GenreList  onSelectGener={(genre) => setSelectedGenre(genre)}/>
+          <GenreList
+            selectedGenre={selectedGenre}
+            onSelectGener={(genre) => setSelectedGenre(genre)}
+          />
         </GridItem>
       </Show>
       <GridItem area="main">
-        <GameGrid  selectedGenre={selectedGenre}/>
+        <GameGrid selectedGenre={selectedGenre} />
       </GridItem>
     </Grid>
   );
