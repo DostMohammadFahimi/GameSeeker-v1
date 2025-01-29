@@ -45,7 +45,13 @@ const PlatformIconsList = ({ platforms }: Props) => {
           }}
           transition="all 0.2s ease-in-out"
         >
-          <Icon as={iconMap[platform.slug]} color="orange.300" w={3} h={3} />
+          <Icon
+            key={platform.id}
+            as={iconMap[platform.slug]}
+            color="orange.300"
+            w={3}
+            h={3}
+          />
         </Box>
       ))}
     </HStack>
