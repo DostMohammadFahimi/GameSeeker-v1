@@ -10,7 +10,7 @@ const ColorModeSwitch = () => {
         isChecked={colorMode === "dark"}
         onChange={toggleColorMode}
       />
-      <Text className="text-sm font-medium">
+      <Text whiteSpace='nowrap' className="text-sm font-medium">
         {colorMode === "dark" ? "Dark Mode" : "Light Mode"}
       </Text>
       {colorMode === "dark" ? (
