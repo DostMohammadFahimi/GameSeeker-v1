@@ -2,7 +2,7 @@ import { Box, Heading, Text } from "@chakra-ui/react";
 import { isRouteErrorResponse, useRouteError } from "react-router-dom";
 import NavBar from "../components/NavBar";
 
-const ErrorHandling = () => {
+const ErrorPage = () => {
   const error = useRouteError();
 
   return (
@@ -20,4 +20,4 @@ const ErrorHandling = () => {
   );
 };
 
-export default ErrorHandling;
+export default ErrorPage;
