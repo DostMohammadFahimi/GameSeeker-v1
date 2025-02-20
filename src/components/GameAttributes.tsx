@@ -8,7 +8,7 @@ interface Props {
 }
 const GameAttributes = ({ game }: Props) => {
   return (
-    <SimpleGrid columns={3} as="dl">
+    <SimpleGrid columns={2} as="dl">
       <DefinitionItem term="Platforms">
         {game.parent_platforms?.map(({ platform }) => (
           <Text key={platform.id}>{platform.name}</Text>
@@ -17,12 +17,12 @@ const GameAttributes = ({ game }: Props) => {
       <DefinitionItem term="Metascore">
         <CriticScore score={game.metacritic} />
       </DefinitionItem>
-      <DefinitionItem term="Rating">{`${game.rating_top} / 5 `}</DefinitionItem>
       <DefinitionItem term="Genres">
         {game.genres.map((genre) => (
           <Text key={genre.id}>{genre.name}</Text>
         ))}
       </DefinitionItem>
+      <DefinitionItem term="Rating">{`${game.rating_top} / 5 `}</DefinitionItem>
       <DefinitionItem term="Publishers">
         {game.publishers?.map((publisher) => (
           <Text key={publisher.id}>{publisher.name}</Text>
